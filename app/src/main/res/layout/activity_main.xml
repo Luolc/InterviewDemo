@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bk_main">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp">
+
+        <Button
+            android:id="@+id/btn_hole_list"
+            android:onClick="onClickHoleList"
+            android:text="@string/main_hole_list"
+            android:textSize="16sp"
+            android:textColor="@color/tx_white"
+            android:background="@drawable/bk_main_button"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btn_week_cal"
+            android:onClick="onClickWeekCal"
+            android:text="@string/main_week_cal"
+            android:textSize="16sp"
+            android:textColor="@color/tx_white"
+            android:background="@drawable/bk_main_button"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btn_url_to_file"
+            android:onClick="onClickUrlToFile"
+            android:text="@string/main_url_to_file"
+            android:textSize="16sp"
+            android:textColor="@color/tx_white"
+            android:background="@drawable/bk_main_button"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btn_image_async"
+            android:onClick="onClickImageAsync"
+            android:text="@string/main_image_async"
+            android:textSize="16sp"
+            android:textColor="@color/tx_white"
+            android:background="@drawable/bk_main_button"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

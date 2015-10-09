@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/bk_item_hole_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp" >
+
+        <TextView
+            android:id="@+id/tv_pid"
+            android:textSize="12sp"
+            android:textColor="@color/tx_secondary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:id="@+id/tv_text"
+            android:textSize="14sp"
+            android:textColor="@color/tx_primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:singleLine="false"
+            android:lineSpacingExtra="4sp" />
+
+        <RelativeLayout
+            android:id="@+id/layout_image"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp" >
+
+            <ImageView
+                android:id="@+id/im_image"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/hole_list_image_description" />
+
+            <TextView
+                android:id="@+id/tv_image_long"
+                android:visibility="gone"
+                android:text="@string/hole_list_image_long_image"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:background="@color/black_80"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="16dp"
+                android:paddingLeft="8dp"
+                android:paddingTop="4dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="4dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tv_image_alt"
+                android:visibility="gone"
+                android:text="@string/hole_list_image_alt"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_audio"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp" >
+
+            <ImageView
+                android:id="@+id/im_audio"
+                android:visibility="gone"
+                android:layout_width="128sp"
+                android:layout_height="32sp"
+                android:contentDescription="@string/hole_list_audio_description" />
+
+            <TextView
+                android:id="@+id/tv_audio_duration"
+                android:visibility="gone"
+                android:textSize="16sp"
+                android:textColor="@color/tx_primary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_toRightOf="@id/im_audio"
+                android:layout_toEndOf="@id/im_audio" />
+
+            <TextView
+                android:id="@+id/tv_audio_alt"
+                android:visibility="gone"
+                android:text="@string/hole_list_audio_alt"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp" >
+
+            <TextView
+                android:id="@+id/tv_post_time"
+                android:textSize="12sp"
+                android:textColor="@color/tx_secondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/tv_comment_count"
+                android:textSize="12sp"
+                android:textColor="@color/tx_primary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <ImageView
+                android:id="@+id/im_comment"
+                android:src="@drawable/pkuhole_comment"
+                android:layout_width="12sp"
+                android:layout_height="12sp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_toLeftOf="@id/tv_comment_count"
+                android:layout_toStartOf="@id/tv_comment_count"
+                android:scaleType="fitXY"
+                android:contentDescription="@string/hole_list_comment_description" />
+
+            <TextView
+                android:id="@+id/tv_view_count"
+                android:textSize="12sp"
+                android:textColor="@color/tx_primary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toLeftOf="@id/im_comment"
+                android:layout_toStartOf="@id/im_comment" />
+
+            <ImageView
+                android:id="@+id/im_view"
+                android:src="@drawable/pkuhole_view"
+                android:layout_width="12sp"
+                android:layout_height="12sp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_toLeftOf="@id/tv_view_count"
+                android:layout_toStartOf="@id/tv_view_count"
+                android:scaleType="fitXY"
+                android:contentDescription="@string/hole_list_view_description" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

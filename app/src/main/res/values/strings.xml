@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">面试Demo</string>
+
+    <string name="main_title">PKU Helper面试Demo</string>
+    <string name="main_hole_list">P大树洞模拟</string>
+    <string name="main_week_cal">当前周数计算</string>
+    <string name="main_url_to_file">Url To File</string>
+    <string name="main_image_async">线程加载图片</string>
+
+    <string name="hole_list_title">P大树洞模拟</string>
+    <string name="hole_list_image_description">HoleIllustration</string>
+    <string name="hole_list_image_long_image">长图</string>
+    <string name="hole_list_image_alt">[图片加载失败]</string>
+    <string name="hole_list_audio_description">HoleAudio</string>
+    <string name="hole_list_audio_alt">[语音加载失败]</string>
+    <string name="hole_list_comment_description">Comment</string>
+    <string name="hole_list_view_description">View</string>
+
+    <string name="file_download_title">URL TO FILE</string>
+    <string name="file_download_button_download">下载文件</string>
+    <string name="file_download_url_correct">一个有效的URL</string>
+    <string name="file_download_url_fault">一个不存在的URL</string>
+
+    <string name="image_async_title">线程加载图片</string>
+    <string name="image_async_button_image_set">下载并设置图片</string>
+
+</resources>
