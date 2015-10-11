@@ -37,7 +37,7 @@ public class ImageDownload {
 
     public interface ImageDownloadListener {
         void onDownloadStart();
-        void onDownComplete();
+        void onDownloadComplete();
         void onError();
     }
 
@@ -50,7 +50,7 @@ public class ImageDownload {
             public void onDownloadStart() {}
 
             @Override
-            public void onDownComplete() {}
+            public void onDownloadComplete() {}
 
             @Override
             public void onError() {}
@@ -63,17 +63,17 @@ public class ImageDownload {
                         listener.onDownloadStart();
                         break;
                     case MESSAGE_DOWNLOAD_COMPLETE:
+                        listener.onDownloadComplete();
                         if (bitmap == null) {
-                            return false;
+                            break;
                         }
                         image.setImageBitmap(bitmap);
-                        listener.onDownComplete();
                         break;
                     case MESSAGE_ENCOUNTERED_ERROR:
                         listener.onError();
                         break;
                     default:
-                        return false;
+                        break;
                 }
                 return false;
             }});

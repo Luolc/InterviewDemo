@@ -56,7 +56,7 @@ public class ImageAsyncActivity extends ActionBarActivity {
                     }
 
                     @Override
-                    public void onDownComplete() {
+                    public void onDownloadComplete() {
                         pbImageDownload.setVisibility(View.GONE);
                     }
 

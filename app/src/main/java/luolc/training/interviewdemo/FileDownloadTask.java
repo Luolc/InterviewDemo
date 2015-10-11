@@ -4,6 +4,8 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Environment;
 import android.util.Log;
+import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import org.apache.http.HttpResponse;
@@ -30,11 +32,13 @@ public class FileDownloadTask extends AsyncTask<Void, Void, Boolean> {
     private Context mContext;
     private String downloadUrl;
     private File outFile;
+    private ProgressBar progressBar;
 
-    public FileDownloadTask(Context context, String url, File file) {
+    public FileDownloadTask(Context context, String url, File file, ProgressBar pb) {
         mContext = context;
         downloadUrl = "";
         outFile = new File(Environment.getExternalStorageDirectory(), "/file.bin");
+        progressBar = pb;
         if(url != null) {
             downloadUrl = url;
         }
@@ -142,6 +146,12 @@ public class FileDownloadTask extends AsyncTask<Void, Void, Boolean> {
     }
 
     @Override
+    protected void onPreExecute() {
+        super.onPreExecute();
+        progressBar.setVisibility(View.VISIBLE);
+    }
+
+    @Override
     protected Boolean doInBackground(Void... params) {
         return urlToFile(downloadUrl, outFile);
     }
@@ -149,6 +159,7 @@ public class FileDownloadTask extends AsyncTask<Void, Void, Boolean> {
     @Override
     protected void onPostExecute(Boolean state) {
         super.onPostExecute(state);
+        progressBar.setVisibility(View.GONE);
         String toast;
         if(state) {
             toast = "下载成功！";

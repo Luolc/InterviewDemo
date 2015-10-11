@@ -85,4 +85,11 @@
 
     </LinearLayout>
 
+    <ProgressBar
+        android:id="@+id/pb_file_download"
+        android:visibility="gone"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_centerInParent="true"/>
+
 </RelativeLayout>
